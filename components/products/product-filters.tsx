@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { SortOption } from '@/lib/types';
 import { Search } from 'lucide-react';
 
 interface ProductFiltersProps {
@@ -12,6 +13,7 @@ interface ProductFiltersProps {
   onCategoryChange: (category: string) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
+  // sortOption: SortOption;
   sortOption: string;
   // onSortChange: (option: SortOption) => void;
 }
@@ -58,7 +60,7 @@ export function ProductFilters({
         <div className="space-y-2">
           <Label>Sort By</Label>
           {/* <Select value={sortOption} onValueChange={(value) => onSortChange(value as SortOption)}> */}
-          <Select value={sortOption} >
+          <Select value={sortOption}>
             <SelectTrigger>
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>

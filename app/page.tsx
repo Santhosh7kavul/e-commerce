@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { products } from '@/lib/data';
 import { ProductCard } from '@/components/ui/product-card';
 import { ProductFilters } from '@/components/products/product-filters';
-// import { SortOption } from '@/lib/types';
+import { SortOption } from '@/lib/types';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  // const [sortOption, setSortOption] = useState<SortOption>('newest');
   const [sortOption, setSortOption] = useState('newest');
 
   const categories = Array.from(new Set(products.map((p) => p.category)));
@@ -22,11 +23,11 @@ export default function Home() {
     })
     .sort((a, b) => {
       switch (sortOption) {
-        case 'price-asc':
+        case 'priceasc':
           return a.price - b.price;
-        case 'price-desc':
+        case 'pricedesc':
           return b.price - a.price;
-        case 'rating-desc':
+        case 'ratingdesc':
           return (b.averageRating || 0) - (a.averageRating || 0);
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -36,7 +37,7 @@ export default function Home() {
     });
 
   return (
-    <div className="container py-8">
+    <div className="container py-8 bg-accent">
       <h1 className="text-4xl font-bold mb-8">Featured Products</h1>
       
       <ProductFilters

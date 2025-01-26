@@ -22,9 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          <header className="border-b">
+          <header className="border-b bg-gray-200">
             <div className="container flex items-center justify-between h-16">
-              <h1 className="text-xl font-bold">Store</h1>
+              <h1 className="text-xl font-bold">K eStore</h1>
               <div className="flex items-center gap-4">
                 <CartSheet />
                 <UserNav />

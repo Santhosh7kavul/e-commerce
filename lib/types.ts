@@ -61,3 +61,5 @@ export interface Rating {
   comment: string;
   productId: string;
 }
+
+export var SortOption :string;
