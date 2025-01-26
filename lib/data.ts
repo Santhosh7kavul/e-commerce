@@ -7,13 +7,13 @@ import { Order, Product, User } from './types';
     name: 'Premium Wireless Headphones',
     description: 'High-quality wireless headphones with noise cancellation.',
     price: 299.99,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e',
+    image: 'https://i.ibb.co/gDS22xX/pexels-photo-205926.webp',
     category: 'electronics',
     ratings: [
       {
         id: '1',
         userId: 'user1',
-        userName: 'John Doe',
+        userName: 'User Name1',
         productId: '1',
         rating: 5,
         comment: 'Amazing sound quality!',
@@ -30,13 +30,13 @@ import { Order, Product, User } from './types';
     name: 'Smart Watch Pro',
     description: 'Advanced smartwatch with health tracking features.',
     price: 199.99,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+    image: 'https://i.ibb.co/4K88bhj/pexels-photo-437037.webp',
     category: 'electronics',
     ratings: [
       {
         id: '1',
         userId: 'user1',
-        userName: 'John Doe',
+        userName: 'User Name1',
         productId: '1',
         rating: 5,
         comment: 'Amazing sound quality!',
@@ -54,8 +54,8 @@ import { Order, Product, User } from './types';
 export const orders: Order[] = [
   {
     id: '1',
-    customerName: 'John Doe',
-    email: 'john@example.com',
+    customerName: 'santhosh kavul',
+    email: 'kavul@example.com',
     address: '123 Main St',
     city: 'New York',
     postalCode: '10001',
@@ -77,12 +77,12 @@ export const orders: Order[] = [
 export const users: User[] = [
   {
     id: '1',
-    email: 'john@example.com',
-    name: 'John Doe',
+    email: 'user1@example.com',
+    name: 'User Name1',
   },
   {
     id: '2',
-    email: 'jane@example.com',
-    name: 'Jane Smith',
+    email: 'user2@example.com',
+    name: 'User Name2',
   }
 ];

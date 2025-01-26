@@ -37,7 +37,7 @@ export default function Home() {
     });
 
   return (
-    <div className="container py-8 bg-accent">
+    <div className=" py-8 bg-accent">
       <h1 className="text-4xl font-bold mb-8">Featured Products</h1>
       
       <ProductFilters
@@ -50,10 +50,12 @@ export default function Home() {
         // onSortChange={setSortOption}
       />
 
+      <div className='flex flex-col '>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+      </div>
       </div>
     </div>
   );
